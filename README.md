@@ -14,7 +14,7 @@ Authenticates to Google Cloud Platform and configures kubectl for GKE clusters.
 
 ```yaml
 - name: Login to GCP and GKE
-  uses: KoalaOps/login-gcp-gke@v1
+  uses: skyhook-io/login-gcp-gke@v1
   with:
     workload_identity_provider: ${{ vars.WIF_PROVIDER }}
     service_account: ${{ vars.WIF_SERVICE_ACCOUNT }}
@@ -52,7 +52,7 @@ Authenticates to Google Cloud Platform and configures kubectl for GKE clusters.
 ### Workload Identity Federation (Recommended)
 ```yaml
 - name: GCP auth with WIF
-  uses: KoalaOps/login-gcp-gke@v1
+  uses: skyhook-io/login-gcp-gke@v1
   with:
     workload_identity_provider: projects/123456789/locations/global/workloadIdentityPools/github/providers/github
     service_account: github-actions@my-project.iam.gserviceaccount.com
@@ -64,7 +64,7 @@ Authenticates to Google Cloud Platform and configures kubectl for GKE clusters.
 ### Service Account Key
 ```yaml
 - name: GCP auth with key
-  uses: KoalaOps/login-gcp-gke@v1
+  uses: skyhook-io/login-gcp-gke@v1
   with:
     credentials_json: ${{ secrets.GCP_CREDENTIALS }}
     project_id: my-project
@@ -75,7 +75,7 @@ Authenticates to Google Cloud Platform and configures kubectl for GKE clusters.
 ### With GAR Docker Login
 ```yaml
 - name: GCP with container registry
-  uses: KoalaOps/login-gcp-gke@v1
+  uses: skyhook-io/login-gcp-gke@v1
   with:
     workload_identity_provider: ${{ vars.WIF_PROVIDER }}
     service_account: ${{ vars.WIF_SA }}
@@ -93,7 +93,7 @@ Authenticates to Google Cloud Platform and configures kubectl for GKE clusters.
 ### With Custom GAR Location
 ```yaml
 - name: GCP with different GAR location
-  uses: KoalaOps/login-gcp-gke@v1
+  uses: skyhook-io/login-gcp-gke@v1
   with:
     workload_identity_provider: ${{ vars.WIF_PROVIDER }}
     service_account: ${{ vars.WIF_SA }}
@@ -112,7 +112,7 @@ Authenticates to Google Cloud Platform and configures kubectl for GKE clusters.
 ### GCP Only (No GKE)
 ```yaml
 - name: GCP auth only
-  uses: KoalaOps/login-gcp-gke@v1
+  uses: skyhook-io/login-gcp-gke@v1
   with:
     credentials_json: ${{ secrets.GCP_CREDENTIALS }}
     project_id: my-project
@@ -123,7 +123,7 @@ Authenticates to Google Cloud Platform and configures kubectl for GKE clusters.
 ### GAR Only (No GKE)
 ```yaml
 - name: GCP with GAR only
-  uses: KoalaOps/login-gcp-gke@v1
+  uses: skyhook-io/login-gcp-gke@v1
   with:
     workload_identity_provider: ${{ vars.WIF_PROVIDER }}
     service_account: ${{ vars.WIF_SA }}
@@ -158,7 +158,7 @@ jobs:
       contents: read
     steps:
       - name: Login to GCP and GKE
-        uses: KoalaOps/login-gcp-gke@v1
+        uses: skyhook-io/login-gcp-gke@v1
         with:
           workload_identity_provider: ${{ vars.WIF_PROVIDER }}
           service_account: ${{ vars.WIF_SA }}
@@ -233,7 +233,7 @@ The action automatically detects the location type and uses the appropriate `gcl
 ```yaml
 - name: Login to GCP and GKE
   id: gcp
-  uses: KoalaOps/login-gcp-gke@v1
+  uses: skyhook-io/login-gcp-gke@v1
   with:
     workload_identity_provider: ${{ vars.WIF_PROVIDER }}
     service_account: ${{ vars.WIF_SA }}

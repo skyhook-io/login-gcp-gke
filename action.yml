@@ -1,6 +1,6 @@
 name: 'Login to GCP GKE'
 description: 'Authenticates to GCP, configures GKE kubeconfig, and logs into GAR'
-author: 'KoalaOps'
+author: 'Skyhook'
 
 branding:
   icon: 'lock'
