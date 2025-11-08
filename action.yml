@@ -1,4 +1,4 @@
-name: 'Login to GCP GKE'
+name: 'Skyhook Login to GCP GKE'
 description: 'Authenticates to GCP, configures GKE kubeconfig, and logs into GAR'
 author: 'Skyhook'
 
