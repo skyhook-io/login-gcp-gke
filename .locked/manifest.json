@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "google-github-actions/auth@v3": "google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093",
+    "google-github-actions/get-gke-credentials@v3": "google-github-actions/get-gke-credentials@3da1e46a907576cefaa90c484278bb5b259dd395",
+    "google-github-actions/setup-gcloud@v3": "google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db"
+  },
+  "npm": null,
+  "runner_tools": "Existing runner binaries and consumer build inputs are not snapshotted.",
+  "snapshot": "25c7ca890efff9fda3c6",
+  "source": {
+    "ref": "v1",
+    "repository": "skyhook-io/login-gcp-gke",
+    "sha": "70f56db3163c38b9cb412f11dd70fe785348fd9b"
+  },
+  "tools": {}
+}
